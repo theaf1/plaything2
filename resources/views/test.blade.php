@@ -7,7 +7,7 @@
         <div class="form-row">
             <div class="col-sm-12 col-lg-6">
                 <div class="form-group">
-                    <select class="form-control" name="test" id="test" size="6" multiple>
+                    <select class="form-control" name="test" id="test" size="3" multiple>
                         <option value="a">option1</option>
                         <option value="b">option2</option>
                         <option value="c">option3</option>
