@@ -25,5 +25,6 @@ Route::get('/hello',function () {
 // Route::get('/test',function () {
 //     return view('test');
 // });
-Route::get('test', [Testcontroller::class, 'index']);
+Route::get('index', [Testcontroller::class, 'index']);
+Route::get('test', [Testcontroller::class, 'create']);
 Route::post('add-test', [Testcontroller::class, 'store']);

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\time;
+use Carbon\Carbon;
 
 class Testcontroller extends Controller
 {
@@ -13,7 +15,14 @@ class Testcontroller extends Controller
      */
     public function index()
     {
-        return view('test');
+       $Indexes = time::all();
+       foreach ($Indexes->time as $Index)
+       {
+            $Index->utc = Carbon::
+       }
+       return view('index')->with([
+           'times'=>$Indexes,
+       ]);
     }
 
     /**
@@ -23,7 +32,7 @@ class Testcontroller extends Controller
      */
     public function create()
     {
-        //
+        return view('test');
     }
 
     /**
@@ -34,7 +43,8 @@ class Testcontroller extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        time::create($request->all());
+        return view('test');
     }
 
     /**
