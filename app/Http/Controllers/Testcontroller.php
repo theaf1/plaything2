@@ -18,7 +18,7 @@ class Testcontroller extends Controller
        $Indexes = time::all();
        foreach ($Indexes->time as $Index)
        {
-            $Index->utc = Carbon::
+            $Index->utc = Carbon::check();
        }
        return view('index')->with([
            'times'=>$Indexes,
