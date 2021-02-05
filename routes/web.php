@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/hello',function () {
     return view('hello');
 });
+Route::get('/boo',function () {
+    return view('bootstrap_show');
+});
 //Route::get('/test','Testcontroller@index');
 //Route::post('/add-test',[Testcontroller::class, 'store']);
 // Route::get('/test',function () {
